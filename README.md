@@ -4,7 +4,7 @@
 # VeryNginx Dockerfile
 
 
-`A very powerful and friendly nginx base on lua-nginx-module( openresty ) which provide WAF, Control Panel, and Dashboards.`
+A very powerful and friendly nginx based on lua-nginx-module [OpenResty](https://openresty.org) which provide WAF, Control Panel and Dashboards.
 
 
 ImageLayers : [![](https://badge.imagelayers.io/camil/verynginx:latest.svg)](https://imagelayers.io/?images=camil/verynginx:latest)
@@ -16,8 +16,7 @@ This repository contains **Dockerfile** of [VeryNginx](https://github.com/alexaz
 ## Informations
 
 
-* Based on alpine:3.3  [alpine:3.3](https://hub.docker.com/r/_/alpine/)
-* Install [Docker](https://www.docker.com/)
+* Based on [Alpine Linux](http://www.alpinelinux.org/)  [alpine:3.3](https://hub.docker.com/r/_/alpine/)
 
 ## Installation
 
