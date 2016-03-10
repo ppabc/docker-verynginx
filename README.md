@@ -1,5 +1,5 @@
 
-#[WIP]
+# [WIP]
 
 # VeryNginx Dockerfile
 
@@ -37,8 +37,16 @@ For example, if you need to install [Extra Modules](https://openresty.org), edit
 # Usage
 
 
-Remove or modify conf.d/domain.conf and conf.d/domain-ssl.conf to match your needs :
+`Remove or modify conf.d/domain.conf and conf.d/domain-ssl.conf to match your needs :`
 
 
 		cd ~/docker-verynginx
         docker run -d -v $PWD/conf.d:/etc/nginx/conf.d -p 80:80 -p 443:443 camil/verynginx
+
+
+###Test it:
+
+	http://localhost/VeryNginx/dashboard/index.html
+	
+	user: verynginx
+	pass: verynginx
