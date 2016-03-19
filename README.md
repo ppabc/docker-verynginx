@@ -47,7 +47,7 @@ For example, if you need to install [Extra Modules](https://openresty.org), edit
 
 ###Test it:
 
-	http://localhost/VeryNginx/dashboard/index.html
-	
+	http://localhost/verynginx/index.html
+
 	user: verynginx
 	pass: verynginx
