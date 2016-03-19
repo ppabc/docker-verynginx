@@ -13,6 +13,7 @@ ImageLayers : [![](https://badge.imagelayers.io/camil/verynginx:latest.svg)](htt
 This repository contains **Dockerfile** of [VeryNginx](https://github.com/alexazhou/VeryNginx)
 
 
+
 ## Informations
 
 
@@ -46,7 +47,7 @@ For example, if you need to install [Extra Modules](https://openresty.org), edit
 
 ###Test it:
 
-	http://localhost/VeryNginx/dashboard/index.html
-	
+	http://localhost/verynginx/index.html
+
 	user: verynginx
 	pass: verynginx
