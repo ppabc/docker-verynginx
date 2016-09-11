@@ -53,7 +53,7 @@ RUN git clone https://github.com/camilb/VeryNginx.git \
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./VeryNginx/nginx.conf $NGINX_PREFIX/conf/nginx.conf \
     && cp -r ./VeryNginx/verynginx /opt/verynginx \
-    && chown -R www-data:www-data $OPENRESTY_PREFIX \
+    && chown -R www-data:www-data /opt/verynginx \
     && rm -rf ./verynginx
 WORKDIR $NGINX_PREFIX/
 
