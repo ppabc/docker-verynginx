@@ -55,7 +55,7 @@ RUN git clone https://github.com/camilb/VeryNginx.git \
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./nginx.conf $NGINX_PREFIX/conf/nginx.conf \
     && cp -r ./verynginx /opt/verynginx \
-    && chown -R www-data:www-data $OPENRESTY_PREFIX \
+    && chown -R www-data:www-data /opt/verynginx \
     && cd .. && rm -rf ./verynginx
 WORKDIR $NGINX_PREFIX/
 
