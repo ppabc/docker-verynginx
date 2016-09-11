@@ -1,8 +1,8 @@
-FROM alpine:3.3
+FROM alpine:3.4
 
-ENV OPENRESTY_VERSION 1.9.7.4
-ENV OPENRESTY_PREFIX /opt/VeryNginx
-ENV NGINX_PREFIX /opt/VeryNginx/nginx
+ENV OPENRESTY_VERSION 1.9.15.1
+ENV OPENRESTY_PREFIX /opt/verynginx/openresty
+ENV NGINX_PREFIX /opt/verynginx/openresty/nginx
 ENV VAR_PREFIX /var/nginx
 
 RUN apk update \
@@ -52,9 +52,9 @@ RUN addgroup -g 1000 www-data && adduser -D  -G www-data -s /bin/false -u 1000 w
 RUN git clone https://github.com/camilb/VeryNginx.git \
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./VeryNginx/nginx.conf $NGINX_PREFIX/conf/nginx.conf \
-    && cp -r ./VeryNginx/VeryNginx /opt/VeryNginx/VeryNginx \
+    && cp -r ./VeryNginx/verynginx /opt/verynginx \
     && chown -R www-data:www-data $OPENRESTY_PREFIX \
-    && rm -rf ./VeryNginx
+    && rm -rf ./verynginx
 WORKDIR $NGINX_PREFIX/
 
-CMD ["/opt/VeryNginx/nginx/sbin/nginx", "-g", "daemon off; error_log /dev/stderr info;"]
+CMD ["/opt/verynginx/openresty/nginx/sbin/nginx", "-g", "daemon off; error_log /dev/stderr info;"]

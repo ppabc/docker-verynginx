@@ -17,7 +17,7 @@ This repository contains **Dockerfile** of [VeryNginx](https://github.com/alexaz
 ## Informations
 
 
-* Based on [Alpine Linux](http://www.alpinelinux.org/)  [alpine:3.3](https://hub.docker.com/r/_/alpine/)
+* Based on [Alpine Linux](http://www.alpinelinux.org/)  [alpine:3.4](https://hub.docker.com/r/_/alpine/)
 
 ## Installation
 
