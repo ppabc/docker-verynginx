@@ -51,7 +51,6 @@ RUN addgroup -g 1000 www-data && adduser -D  -G www-data -s /bin/false -u 1000 w
 
 RUN git clone https://github.com/camilb/VeryNginx.git \
     && cd ./VeryNginx && git checkout tags/v0.3.3.1 \
-
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./nginx.conf $NGINX_PREFIX/conf/nginx.conf \
     && cp -r ./verynginx /opt/verynginx \
