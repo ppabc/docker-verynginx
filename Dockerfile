@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-ENV OPENRESTY_VERSION 1.9.15.1
+ENV OPENRESTY_VERSION 1.11.2.1
 ENV OPENRESTY_PREFIX /opt/verynginx/openresty
 ENV NGINX_PREFIX /opt/verynginx/openresty/nginx
 ENV VAR_PREFIX /var/nginx
