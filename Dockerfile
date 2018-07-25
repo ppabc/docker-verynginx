@@ -23,8 +23,8 @@ RUN apk update \
     --error-log-path=$VAR_PREFIX/error.log \
     --pid-path=$VAR_PREFIX/nginx.pid \
     --lock-path=$VAR_PREFIX/nginx.lock \
-    --user=www-data \
-    --group=www-data \
+    --user=nginx \
+    --group=nginx \
     --with-luajit \
     --with-pcre-jit \
     --with-http_ssl_module \
