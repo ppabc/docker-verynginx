@@ -1,6 +1,6 @@
-FROM alpine:3.4
+FROM alpine:3.8
 
-ENV OPENRESTY_VERSION 1.11.2.1
+ENV OPENRESTY_VERSION 1.13.6.2
 ENV OPENRESTY_PREFIX /opt/verynginx/openresty
 ENV NGINX_PREFIX /opt/verynginx/openresty/nginx
 ENV VAR_PREFIX /var/nginx
@@ -49,7 +49,7 @@ RUN apk update \
 
 RUN addgroup -g 1000 www-data && adduser -D  -G www-data -s /bin/false -u 1000 www-data
 
-RUN git clone https://github.com/camilb/VeryNginx.git \
+RUN git clone https://github.com/alexazhou/VeryNginx.git \
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./VeryNginx/nginx.conf $NGINX_PREFIX/conf/nginx.conf \
     && cp -r ./VeryNginx/verynginx /opt/verynginx \
