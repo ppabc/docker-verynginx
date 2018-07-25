@@ -47,13 +47,13 @@ RUN apk update \
  && rm -rf /var/cache/apk/* \
  && rm -rf /root/ngx_openresty
 
-RUN addgroup -g 1000 www-data && adduser -D  -G www-data -s /bin/false -u 1000 www-data
+RUN addgroup -g 1000 nginx && adduser -D  -G nginx -s /bin/false -u 1000 nginx
 
 RUN git clone https://github.com/alexazhou/VeryNginx.git \
     && rm -f $NGINX_PREFIX/conf/nginx.conf \
     && cp ./VeryNginx/nginx.conf $NGINX_PREFIX/conf/nginx.conf \
     && cp -r ./VeryNginx/verynginx /opt/verynginx \
-    && chown -R www-data:www-data /opt/verynginx \
+    && chown -R nginx:nginx /opt/verynginx \
     && rm -rf ./verynginx
 WORKDIR $NGINX_PREFIX/
 
